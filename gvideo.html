@@ -6,61 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="gvideo.css">
-    <title>Gallery Video</title>
+    <title>Galery video</title>
 </head>
 <body>
 
-<div class="container">
-    <h1>Gallery Video</h1>
+    <div class="container">
+
+    <h1>Galery Video</h1>
 
     <div class="video-container">
-        <div class="video" data-src="videofile/3D popup card.mp4">
-            <video src="videofile/3D popup card.mp4" muted controls></video>
-        </div>
-        <div class="video" data-src="videofile/build gauge with css.mp4">
-            <video src="videofile/build gauge with css.mp4" muted controls></video>
-        </div>
-        <div class="video" data-src="videofile/3D popup card.mp4">
-            <video src="videofile/custom select box.mp4" muted controls></video>
-        </div>
-        <div class="video" data-src="videofile/build gauge with css.mp4">
-            <video src="videofile/customize HTML5 form elements.mp4" muted controls></video>
-        </div>
-        <div class="video" data-src="videofile/3D popup card.mp4">
-            <video src="videofile/embed google map to contact form.mp4" muted controls></video>
-        </div>
-        <div class="video" data-src="videofile/build gauge with css.mp4">
-            <video src="videofile/manipulate text background.mp4" muted controls></video>
-        </div>
-        <div class="video" data-src="videofile/3D popup card.mp4">
-            <video src="videofile/password strength checker javascript web app.mp4" muted controls></video>
-        </div>
-        <div class="video" data-src="videofile/build gauge with css.mp4">
-            <video src="videofile/vid-11.mp4" muted controls></video>
-        </div>
-        <!-- Tambahkan video lain dengan cara menyalin div .video di atas dan mengganti data-src dengan lokasi file video yang sesuai -->
+        <div class="video"><video src="videofile/3D popup card.mp4" muted controls></video></div>
+        <div class="video"><video src="videofile/build gauge with css.mp4" muted controls></video></div>
+        <div class="video"><video src="videofile/custom select box.mp4" muted controls></video></div>
+        <div class="video"><video src="videofile/customize HTML5 form elements.mp4" muted controls></video></div>
+        <div class="video"><video src="videofile/embed google map to contact form.mp4" muted controls></video></div>
+        <div class="video"><video src="videofile/manipulate text background.mp4" muted controls></video></div>
+        <div class="video"><video src="videofile/password strength checker javascript web app.mp4" muted controls></video></div>
+        <div class="video"><video src="videofile/vid-11.mp4" muted controls></video></div>
     </div>
 
     <div class="popup-video">
-        <span>&times;</span>
-        <video src="" muted autoplay controls></video>
+        <span>&nbsp;</span>
+        <video src="videofile/3D popup card.mp4" muted autoplay controls></video>
     </div>
 </div>
 
 <script>
-    document.querySelectorAll('.video-container .video').forEach(video => {
-        video.onclick = () => {
-            const videoSrc = video.getAttribute('data-src');
-            document.querySelector('.popup-video video').src = videoSrc;
-            document.querySelector('.popup-video').style.display = 'block';
-        };
+    document.querySelectorAll('.video-container').forEach(vid => {
+        vid.onclick = () =>{
+            document.querySelectorAll('.popup-video').style.display = 'block';
+            document.querySelectorAll('.popup-video video').src = vid.getAttribute('src');
+        }
     });
-
-    document.querySelector('.popup-video span').onclick = () => {
-        document.querySelector('.popup-video').style.display = 'none';
-        document.querySelector('.popup-video video').pause();
-    };
+    document.querySelectorAll('.popup-video span').onclick = () =>{
+        document.querySelectorAll('.popup-video').style.display = 'none';
+    }
 </script>
-
 </body>
 </html>
