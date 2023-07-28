@@ -32,7 +32,7 @@
     width: 350px;
     border: 5px solid #fff;
     border-radius: 5px;
-    box-shadow: 0 5px rgba(0, 0, 0, .7);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .7);
     cursor: pointer;
     overflow: hidden;
 }
@@ -67,20 +67,19 @@
     border: 3px solid #fff;
     object-fit: cover;
 }
+
 .container .popup-video span{
     position: absolute;
-    top: 5px; right: 20px;
+    top: 5px; right:20px;
     font-size: 50px;
-    color: #fff;
+    color:#f7f0f0;
     font-weight: bolder;
     z-index: 100;
     cursor: pointer;
 }
-
 @media (max-width:768px){
     .container .popup-video video{
         width: 95%;
     }
+    
 }
-
-

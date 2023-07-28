@@ -1,46 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="gvideo.css">
-    <title>Galery video</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- custom css file link -->
+<link rel="stylesheet" href="css/gvideo.css">
 </head>
 <body>
+<div class="container">
 
-    <div class="container">
-
-    <h1>Galery Video</h1>
+    <h1>Video gallery</h1>
 
     <div class="video-container">
-        <div class="video"><video src="videofile/3D popup card.mp4" muted controls></video></div>
-        <div class="video"><video src="videofile/build gauge with css.mp4" muted controls></video></div>
-        <div class="video"><video src="videofile/custom select box.mp4" muted controls></video></div>
-        <div class="video"><video src="videofile/customize HTML5 form elements.mp4" muted controls></video></div>
-        <div class="video"><video src="videofile/embed google map to contact form.mp4" muted controls></video></div>
-        <div class="video"><video src="videofile/manipulate text background.mp4" muted controls></video></div>
-        <div class="video"><video src="videofile/password strength checker javascript web app.mp4" muted controls></video></div>
-        <div class="video"><video src="videofile/vid-11.mp4" muted controls></video></div>
+        <div class="Video"><video src="videofile/3D popup card.mp4" muted></video></div>
+        <div class="Video"><video src="videofile/build gauge with css.mp4" muted></video></div>
+        <div class="Video"><video src="videofile/custom select box.mp4" muted></video></div>
+        <div class="Video"><video src="videofile/customize HTML5 form elements.mp4" muted></video></div>
+        <div class="Video"><video src="videofile/embed google map to contact form.mp4" muted></video></div>
+        <div class="Video"><video src="videofile/manipulate text background.mp4" muted></video></div>
     </div>
 
     <div class="popup-video">
-        <span>&nbsp;</span>
+        <span>&nbsp;X</span>
         <video src="videofile/3D popup card.mp4" muted autoplay controls></video>
     </div>
+
 </div>
 
 <script>
-    document.querySelectorAll('.video-container').forEach(vid => {
-        vid.onclick = () =>{
-            document.querySelectorAll('.popup-video').style.display = 'block';
-            document.querySelectorAll('.popup-video video').src = vid.getAttribute('src');
-        }
-    });
-    document.querySelectorAll('.popup-video span').onclick = () =>{
-        document.querySelectorAll('.popup-video').style.display = 'none';
+
+document.querySelectorAll('.video-container video').forEach(vid => {
+    vid.onclick = () =>{
+        document.querySelector('.popup-video').style.display = 'block';
+        document.querySelector('.popup-video video').src = vid.getAttribute('src');
     }
+});
+
+document.querySelector('.popup-video span').onclick = () => {
+    document.querySelector('.popup-video').style.display = 'none';
+}
+
 </script>
+
 </body>
 </html>
